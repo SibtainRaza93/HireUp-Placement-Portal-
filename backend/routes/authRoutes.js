@@ -5,7 +5,7 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
 
-// ✅ REGISTER
+// REGISTER
 router.post("/register", async (req, res) => {
   try {
     const { name, email, password } = req.body;
@@ -27,7 +27,7 @@ router.post("/register", async (req, res) => {
 });
 
 
-// ✅ LOGIN
+//  LOGIN
 router.post("/login", async (req, res) => {
   try {
     const { email, password } = req.body;
@@ -39,7 +39,7 @@ router.post("/login", async (req, res) => {
     if (!isMatch) return res.status(400).json({ message: "Wrong password" });
 
     // const token = jwt.sign(
-    //   { id: user._id, role: user.role }, // 🔥 add role
+    //   { id: user._id, role: user.role }, // add role
     //   "secretkey",
     //   { expiresIn: "1d" }
     // );

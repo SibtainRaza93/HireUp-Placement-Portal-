@@ -4,7 +4,7 @@ const Application = require("../models/Application");
 const auth = require("../middleware/authMiddleware");
 
 
-// ✅ APPLY
+//  APPLY
 router.post("/", auth, async (req, res) => {
   try {
     const application = new Application({
@@ -20,7 +20,7 @@ router.post("/", auth, async (req, res) => {
 });
 
 
-// ✅ GET
+// GET
 router.get("/", async (req, res) => {
   try {
     const applications = await Application.find()

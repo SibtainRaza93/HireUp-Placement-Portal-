@@ -7,7 +7,7 @@ const auth = require("../middleware/authMiddleware");
 router.get("/stats", auth, async (req, res) => {
   try {
 
-    // 🔒 Only admin
+    //  Only admin
     if (req.user.role !== "admin") {
       return res.status(403).json({ message: "Access denied" });
     }
