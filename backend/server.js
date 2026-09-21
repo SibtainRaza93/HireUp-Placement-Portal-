@@ -15,7 +15,7 @@ app.use(
     origin: [
       "http://localhost:5173",
       "http://localhost:5174",
-      "YOUR_VERCEL_FRONTEND_URL"
+      "https://hire-up-placement-portal.vercel.app/"
     ],
     credentials: true,
   })
